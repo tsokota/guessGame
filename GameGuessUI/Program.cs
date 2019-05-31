@@ -31,7 +31,6 @@ namespace GameGuessUI
             while (true)
             {
                 Console.Write(str);
-
                 if (int.TryParse(Console.ReadLine(), out res) && res >= leftBorder && res <= rightBorder)
                     break;
 
@@ -49,9 +48,9 @@ namespace GameGuessUI
 
         static void AddNewPlayers(int gamersNum, Game.Game game)
         {
-            for (int i = 0; i < gamersNum; i++)
+            for (int i = 1; i <= gamersNum; i++)
             {
-                game.AddNewGamer((GamerTypesEnum)(GetInt("Input type of players: ", 0, 4)), "Gamer" + 1, random.Next(20, 65));
+                game.AddNewGamer((GamerTypesEnum)(GetInt($"Input type {i} player: ", 0, 4)), "Gamer" + i, random.Next(20, 65));
             }
         }
     }

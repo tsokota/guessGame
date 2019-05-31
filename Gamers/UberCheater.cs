@@ -18,7 +18,7 @@ namespace Gamers
         {
             while (true)
             {
-                if (used.IndexOf(_counter) != -1)
+                if (used.IndexOf(_counter) == -1)
                     break;
                 _counter++;
             }

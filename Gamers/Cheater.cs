@@ -19,7 +19,7 @@ namespace Gamers
             while (true)
             {
                 num = random.Next(40, 141);
-                if (used.IndexOf(num) != -1)
+                if (used.IndexOf(num) == -1)
                     break;
             }
 
