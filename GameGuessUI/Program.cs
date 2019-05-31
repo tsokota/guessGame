@@ -13,21 +13,14 @@ namespace GameGuessUI
         static readonly Random random = new Random((int)DateTime.Now.Ticks);
         static void Main(string[] args)
         {
-           
-            int gamersNum = GetInt("Input number of players: ", 2, 8);
 
-            Game.Game game = new Game.Game(gamersNum, random.Next(40, 141));
+            int gamersNum = GetInt("Input number of players: ", 2, 8); // get number of players
 
-            for (int i = 0; i < gamersNum; i++)
-            {
-                game.AddNewGamer((GamerTypesEnum)(GetInt("Input type of players: ", 0, 4)),"Gamer"+1, random.Next(20, 65));
-            }
+            Game.Game game = new Game.Game(gamersNum, random.Next(40, 141)); // create new game
 
+            AddNewPlayers(gamersNum, game);  // add players to game
 
-            List<Gamer> win = game.StartPlay();
-
-            foreach(var g in win)
-                Console.WriteLine("Winner -> " + g.Name);
+            PrintWinners(game.StartPlay()); // play and print winners
 
             Console.ReadKey();
         }
@@ -48,6 +41,18 @@ namespace GameGuessUI
             return res;
         }
 
+        static void PrintWinners(List<Gamer> win)
+        {
+            foreach (var g in win)
+                Console.WriteLine("Winner -> " + g.Name);
+        }
 
+        static void AddNewPlayers(int gamersNum, Game.Game game)
+        {
+            for (int i = 0; i < gamersNum; i++)
+            {
+                game.AddNewGamer((GamerTypesEnum)(GetInt("Input type of players: ", 0, 4)), "Gamer" + 1, random.Next(20, 65));
+            }
+        }
     }
 }
