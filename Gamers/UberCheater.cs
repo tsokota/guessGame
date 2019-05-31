@@ -8,9 +8,7 @@ namespace Gamers
 {
     public class UberCheater : Gamer
     {
-        public  UberCheater(string name, int age) : base(name, age) { }
-
-        public override GamerTypesEnum Type => GamerTypesEnum.UberCheater;
+        public UberCheater(string name, int age) : base(name, age) { }
 
         private int _counter { get; set; } = 40;
 

@@ -11,6 +11,7 @@ namespace GameGuessUI
     class Program
     {
         static readonly Random random = new Random((int)DateTime.Now.Ticks);
+
         static void Main(string[] args)
         {
 
@@ -43,7 +44,9 @@ namespace GameGuessUI
         static void PrintWinners(List<Gamer> win)
         {
             foreach (var g in win)
+            {
                 Console.WriteLine("Winner -> " + g.Name);
+            }   
         }
 
         static void AddNewPlayers(int gamersNum, Game.Game game)

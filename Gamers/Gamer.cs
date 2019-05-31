@@ -14,8 +14,6 @@ namespace Gamers
 
         public abstract int GetNumber();
 
-        public abstract GamerTypesEnum Type { get; }
-
         internal readonly Random random = new Random((int)DateTime.Now.Ticks);
 
         internal static List<int> used = new List<int>();

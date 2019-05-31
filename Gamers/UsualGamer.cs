@@ -10,8 +10,6 @@ namespace Gamers
     {
         public UsualGamer(string name, int age) : base(name, age) { }
 
-        public override GamerTypesEnum Type => GamerTypesEnum.Usual;
-
         public override int GetNumber()
         {
             int num = random.Next(40, 141);

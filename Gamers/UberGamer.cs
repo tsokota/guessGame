@@ -10,14 +10,12 @@ namespace Gamers
     {
         public UberGamer(string name, int age) : base(name, age) { }
 
-        public override GamerTypesEnum Type => GamerTypesEnum.Uber;
-
         private int _counter { get; set; } = 40;
 
         public override int GetNumber()
         {
             localMem.Add(_counter);
             return _counter++;
-        } 
+        }
     }
 }

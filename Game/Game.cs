@@ -95,7 +95,7 @@ namespace Game
 
         public Gamer ToPlay()
         {
-            for (int i = 0; i < 100; i+=Gamers.Count())
+            for (int i = 0; i < 100; i += Gamers.Count())
             {
                 foreach (var g in Gamers)
                 {

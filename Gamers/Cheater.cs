@@ -10,8 +10,6 @@ namespace Gamers
     {
         public Cheater(string name, int age) : base(name, age) { }
 
-        public override GamerTypesEnum Type => GamerTypesEnum.Cheater;
-
         public override int GetNumber()
         {
             int num;

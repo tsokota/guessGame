@@ -10,8 +10,6 @@ namespace Gamers
     {
         public NotebookGamer(string name, int age) : base(name, age) { }
 
-        public override GamerTypesEnum Type => GamerTypesEnum.Notebook;
-
         public override int GetNumber()
         {
             int num;
